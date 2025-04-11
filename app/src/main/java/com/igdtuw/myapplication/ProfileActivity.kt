@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.TextView
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,39 +26,35 @@ class ProfileActivity : AppCompatActivity() {
         editIcon = findViewById(R.id.editIcon)
 
         val startFitnessButton = findViewById<TextView>(R.id.btnfitness)
-        val chatboxButton = findViewById<TextView>(R.id.btnchatbox)
         val consultButton = findViewById<TextView>(R.id.btnconsult)
         val gameButton = findViewById<TextView>(R.id.btngame)
-        val editIcon = findViewById<ImageView>(R.id.editIcon)
+        val streaksButton = findViewById<TextView>(R.id.btnstreaks)
 
-        // Lottie background (already auto playing in XML)
         val lottieBackground = findViewById<LottieAnimationView>(R.id.lottieBackground)
 
-        // Select profile picture from gallery
         editIcon.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(intent, PICK_IMAGE_REQUEST)
         }
 
-        // Button click actions (replace with your activities)
         startFitnessButton.setOnClickListener {
-            Toast.makeText(this, "Opening Fitness Page...", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Opening Fitness Page...", Toast.LENGTH_SHORT).show()
             // startActivity(Intent(this, FitnessActivity::class.java))
         }
 
-        chatboxButton.setOnClickListener {
-            Toast.makeText(this, "Opening Chatbox...", Toast.LENGTH_LONG).show()
-            // startActivity(Intent(this, ChatActivity::class.java))
-        }
-
         consultButton.setOnClickListener {
-            Toast.makeText(this, "Opening Consult...", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Opening Consult...", Toast.LENGTH_SHORT).show()
             // startActivity(Intent(this, ConsultActivity::class.java))
         }
 
         gameButton.setOnClickListener {
-            Toast.makeText(this, "Opening Game...", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Opening Game...", Toast.LENGTH_SHORT).show()
             // startActivity(Intent(this, GameActivity::class.java))
+        }
+
+        streaksButton.setOnClickListener {
+            Toast.makeText(this, "Opening Streaks...", Toast.LENGTH_SHORT).show()
+            // startActivity(Intent(this, StreaksActivity::class.java))
         }
     }
 
