@@ -16,9 +16,9 @@
         app:lottie_rawRes="@raw/fitness_animation"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:scaleType="centerCrop"
         android:alpha="0.6"
-        android:translationY="50dp"/>
+        android:translationY="50dp"
+        android:scaleType="fitXY" />
 
     <ScrollView
         android:layout_width="match_parent"
