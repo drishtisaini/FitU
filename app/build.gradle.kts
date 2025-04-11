@@ -1,4 +1,5 @@
 plugins {
+    id("kotlin-kapt")
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
@@ -45,4 +46,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-}
+    implementation("com.airbnb.android:lottie:6.1.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.airbnb.android:lottie:6.1.0")
+    implementation("com.airbnb.android:lottie:6.4.0")
+    }
+
+
+
+
