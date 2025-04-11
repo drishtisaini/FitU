@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Background Image -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,7 +14,7 @@
         android:alpha="0.4"
         android:contentDescription="background" />
 
-    <!-- Foreground UI -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +22,7 @@
         android:gravity="center"
         android:padding="32dp">
 
-        <!-- App Name -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,8 +32,9 @@
             android:textColor="@color/black"
             android:layout_marginBottom="40dp" />
 
-        <!-- Username -->
+
         <EditText
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
@@ -42,8 +43,9 @@
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
 
-        <!-- Email -->
+
         <EditText
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -53,8 +55,9 @@
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
 
-        <!-- Password -->
+
         <EditText
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -75,7 +78,7 @@
             android:textColor="#FFFFFF"
             android:layout_marginBottom="16dp" />
 
-        <!-- Login Link -->
+
         <TextView
             android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
