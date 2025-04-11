@@ -38,8 +38,19 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                 }
                 else -> {
+                    // ✅ Save credentials in SharedPreferences
+                    val sharedPref = getSharedPreferences("FitU", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.putString("user_email", email)
+                    editor.putString("user_password", password)
+                    editor.apply()
+
+                    Toast.makeText(this, "✅ Sign Up Successful!", Toast.LENGTH_SHORT).show()
+
+                    // Go to Profile Page
                     val intent = Intent(this, ProfileActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
             }
         }
