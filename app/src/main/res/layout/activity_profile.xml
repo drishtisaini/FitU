@@ -12,13 +12,13 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieBackground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         app:lottie_rawRes="@raw/fitness_animation"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         android:alpha="0.6"
         android:translationY="50dp"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:layout_height="300dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
