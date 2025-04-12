@@ -52,7 +52,12 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.airbnb.android:lottie:6.1.0")
     implementation("com.airbnb.android:lottie:6.4.0")
-    }
+    implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    implementation("com.google.android.material:material:1.11.0")
+
+
+
+}
 
 
 
