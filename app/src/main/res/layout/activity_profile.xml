@@ -1,108 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieBackground"
+
+    <!-- Main Content -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:lottie_rawRes="@raw/fitness_animation"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:scaleType="centerCrop"
-        android:translationY="50dp"
-        android:alpha="0.3" />
+        android:layout_height="match_parent">
 
+        <!-- 🔥 Hamburger Icon -->
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_menu"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="Menu Icon" />
 
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="24dp">
-
-        <LinearLayout
+        <!-- 🌟 Background Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/fitness_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:scaleType="centerCrop"
+            android:translationY="50dp"
+            android:alpha="0.3" />
 
+        <!-- 🌈 Scrollable Profile Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:layout_below="@id/menuIcon">
 
-            <RelativeLayout
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="50dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_user"
-                    android:scaleType="centerCrop" />
-
-                <ImageView
-                    android:id="@+id/editIcon"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_margin="4dp"
-                    android:padding="5dp"
-                    android:background="@drawable/your_default_avatar"
-                    android:elevation="4dp" />
-
-            </RelativeLayout>
-            <TextView
-                android:id="@+id/btnstreaks"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="🔥 Streaks"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <Button
-                android:id="@+id/btnfitness"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="🏋️ Start Fitness"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:background="@drawable/oval_button_red"
-                android:layout_marginBottom="24dp"
-                />
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="50dp">
 
-            <Button
-                android:id="@+id/btnconsult"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="🧑‍⚕️ Consult"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:background="@drawable/oval_button_red"
-                android:layout_marginBottom="24dp"
-                />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_user"
+                        android:scaleType="centerCrop" />
 
-            <Button
-                android:id="@+id/btngame"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="🎮 Game"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:background="@drawable/oval_button_red"
-                android:layout_marginBottom="50dp"
-                />
+                    <ImageView
+                        android:id="@+id/editIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="4dp"
+                        android:padding="5dp"
+                        android:background="@drawable/your_default_avatar"
+                        android:elevation="4dp" />
 
+                </RelativeLayout>
 
+                <TextView
+                    android:id="@+id/btnstreaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔥 Streaks"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:textStyle="bold" />
 
+                <Button
+                    android:id="@+id/btnfitness"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="🏋️ Start Fitness"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:background="@drawable/oval_button_red"
+                    android:layout_marginBottom="24dp" />
 
+                <Button
+                    android:id="@+id/btnconsult"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="🧑‍⚕️ Consult"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:background="@drawable/oval_button_red"
+                    android:layout_marginBottom="24dp" />
 
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+                <Button
+                    android:id="@+id/btngame"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="🎮 Game"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:background="@drawable/oval_button_red"
+                    android:layout_marginBottom="50dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- 🧾 Sidebar Menu -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

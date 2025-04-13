@@ -49,6 +49,12 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "❌ Invalid credentials or not signed up!", Toast.LENGTH_SHORT).show()
             }
         }
+        val forgotPasswordTextView = findViewById<TextView>(R.id.tvForgotPassword)
+        forgotPasswordTextView.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun isValidPassword(password: String): Boolean {
