@@ -54,9 +54,6 @@ class ProfileActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                R.id.nav_edit_profile -> {
-                    Toast.makeText(this, "Edit Profile", Toast.LENGTH_SHORT).show()
-                }
                 R.id.nav_health_data -> {
                     Toast.makeText(this, "My Health Data ", Toast.LENGTH_SHORT).show()
                 }
