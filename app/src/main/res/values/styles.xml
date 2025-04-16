@@ -8,4 +8,12 @@
         <item name="android:background">?attr/selectableItemBackground</item> <!-- Ripple effect -->
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    <style name="CustomEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
 </resources>

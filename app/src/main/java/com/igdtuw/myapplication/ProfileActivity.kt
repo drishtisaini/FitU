@@ -13,6 +13,10 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.airbnb.lottie.LottieAnimationView
 import com.google.android.material.navigation.NavigationView
 import de.hdodenhof.circleimageview.CircleImageView
+import com.igdtuw.myapplication.MyAccountActivity
+
+
+
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -46,8 +50,10 @@ class ProfileActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_my_account -> {
-                    Toast.makeText(this, " My Account..", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MyAccountActivity::class.java)
+                    startActivity(intent)
                 }
+
                 R.id.nav_edit_profile -> {
                     Toast.makeText(this, "Edit Profile", Toast.LENGTH_SHORT).show()
                 }
@@ -57,12 +63,14 @@ class ProfileActivity : AppCompatActivity() {
                 R.id.nav_logout -> {
                     Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show()
                 }
+
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true
+
         }
 
-        // 🔄 Profile Image Select
+
         editIcon.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(intent, PICK_IMAGE_REQUEST)
@@ -93,4 +101,7 @@ class ProfileActivity : AppCompatActivity() {
             profileImage.setImageURI(imageUri)
         }
     }
-}
+
+    }
+
+
