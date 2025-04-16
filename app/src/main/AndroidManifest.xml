@@ -28,6 +28,10 @@
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
 
+        <activity android:name=".MyAccountActivity"/>.
+
+
+
 
         <activity
             android:name=".MainActivity"
@@ -39,6 +43,8 @@
             </intent-filter>
         </activity>
 
+
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>
