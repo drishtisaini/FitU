@@ -76,10 +76,11 @@ class ProfileActivity : AppCompatActivity() {
             startActivityForResult(intent, PICK_IMAGE_REQUEST)
         }
 
-        // 🔘 Button Click Actions
         startFitnessButton.setOnClickListener {
-            Toast.makeText(this, "Opening Fitness Page...", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, FitnessActivity::class.java)
+            startActivity(intent)
         }
+
 
         consultButton.setOnClickListener {
             Toast.makeText(this, "Opening Consult...", Toast.LENGTH_SHORT).show()

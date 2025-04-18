@@ -28,7 +28,9 @@
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
 
-        <activity android:name=".MyAccountActivity"/>.
+        <activity android:name=".MyAccountActivity"/>
+        <activity android:name=".FitnessActivity" />
+
 
 
 

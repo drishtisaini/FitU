@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/headingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's Begin"
+            android:textColor="#800080"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnMeditation"
+            style="@style/FitnessButtonPurple"
+            android:text="Meditation" />
+
+        <Button
+            android:id="@+id/btnYoga"
+            style="@style/FitnessButtonGrey"
+            android:text="Yoga" />
+
+        <Button
+            android:id="@+id/btnWeightLoss"
+            style="@style/FitnessButtonPurple"
+            android:text="Weight Loss" />
+
+        <Button
+            android:id="@+id/btnWeightGain"
+            style="@style/FitnessButtonGrey"
+            android:text="Weight Gain" />
+
+        <Button
+            android:id="@+id/btnManageShape"
+            style="@style/FitnessButtonPurple"
+            android:text="Manage Shape" />
+
+
+
+    </LinearLayout>
+</ScrollView>
