@@ -29,7 +29,12 @@
             android:exported="true" />
 
         <activity android:name=".MyAccountActivity"/>
-        <activity android:name=".FitnessActivity" />
+        <activity
+            android:name=".FitnessActivity"
+            android:exported="true">
+        </activity>
+
+
 
 
 

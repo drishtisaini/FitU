@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog
 class FitnessActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fitness)
+        setContentView(R.layout.activity_fitness_activity)
 
         val meditation = findViewById<Button>(R.id.btnMeditation)
         val yoga = findViewById<Button>(R.id.btnYoga)
